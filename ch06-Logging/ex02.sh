@@ -1,7 +1,7 @@
 #!/bin/bash
 
 my_logger () {
-    local MESSAGE=( $@ )
+    local MESSAGE=( "$@" )
     echo "${MESSAGE[@]}"
     logger -i -t randomly -p user.info "${MESSAGE[@]}"
 }
